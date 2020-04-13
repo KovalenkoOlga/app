@@ -14,7 +14,7 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
-    "start": "eval $(cat .env.development) react-scripts start",
+    "start": "react-scripts start",
     "build": "eval $(cat .env.production) react-scripts build",
     "test": "eval $(cat .env.development) react-scripts test",
     "eject": "react-scripts eject",
