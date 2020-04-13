@@ -20,7 +20,7 @@ docker-machine env box
 ```
 The run the database
 ```
-docker run -it -p 5432:5432 -e POSTGRES_PASSWORD=[password] postgres
+docker run -it -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
 ```
 
 #### Clone project repository and change directory to the repository in two terminal windows
@@ -36,25 +36,13 @@ cd Client
 npm install
 npm start 
 ```
-Npm start command run app with default values: REACT_APP_API_ENDPOINT=http://localhost:5000 REACT_APP_RECORD_NUMBER_TO_DISPLAY=20
-
-or use 
-```  
-REACT_APP_API_ENDPOINT=http://localhost:5000 REACT_APP_RECORD_NUMBER_TO_DISPLAY=20 npm start
-```
 
 #### 2nd window Server
 The "Server" directory contains the code for the node.js express server. 
 ```
 cd Server
 npm install
-DB_USER=user  DB_SCHEME=scheme DB_PASSWORD=password  npm start  
-```
-Npm start command runs server with default values: PORT=5000 DB_HOST=localhost DB_PORT=5432 FRONT_URL=http://localhost:3000
-
-or use 
-``` 
-PORT=5000 DB_USER=user DB_HOST=localhost DB_SCHEME=scheme DB_PASSWORD=password DB_PORT=5432 FRONT_URL=http://localhost:3000 npm start
+npm start  
 ```
 
 As both command `npm start` for client and ` ... npm start` for Server are running application frontend will be available at http://localhost:3000
